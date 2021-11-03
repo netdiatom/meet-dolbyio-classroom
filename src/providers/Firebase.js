@@ -1,18 +1,21 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "<API_KEY>",
-  authDomain: "<PROJECT_ID>.firebaseapp.com",
-  databaseURL: "<DATABASE_ID>.firebaseio.com",
-  projectId: "<PROJECT_ID>",
-  storageBucket: "<BUCKET>.appspot.com",
-  messagingSenderId: "<MESSAGING_SENDER_ID>",
-  appId: "<APP_ID>",
-  measurementId: "<MEASUREMENT_ID>"
+  apiKey: "AIzaSyAa9Fd1kmEZQskbHYcs9TZ9OwfRsa8CwR8",
+  authDomain: "dolby-classroom.firebaseapp.com",
+  projectId: "dolby-classroom",
+  storageBucket: "dolby-classroom.appspot.com",
+  messagingSenderId: "696664392582",
+  appId: "1:696664392582:web:1a3dabb7ea64488dcd2207",
+  measurementId: "G-VSC5HH0SCW"
 };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-
-export { db };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
